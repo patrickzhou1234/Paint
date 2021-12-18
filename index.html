@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Paint</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onmouseup="penup()">
+    <input type="range" id="thickness" max="100" value="10">
+    <canvas id="maincanv" onmousedown="pendown()"></canvas>
+    <button id="clearbtn" onclick="revealconfirm()"><strong>clear</strong></button>
+    <div id="overlay"></div>
+    <div id="clearwarning"></div>
+    <div id="confirmcontainer">
+        <center><span style="color:#fff;font-size: calc(2vw + 2vh);">Are you sure? This cannot be undone! </span></center>
+        <button id="confirm" onclick="clearcanv()"><strong>Confirm</strong></button>
+        <button id="cancel" onclick="hideconfirm()"><strong>Cancel</strong></button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
